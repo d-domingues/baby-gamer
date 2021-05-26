@@ -1,0 +1,202 @@
+{
+  "bat": {
+    "filled": "assets/filled/bat.svg",
+    "plain": "assets/plain/bat.svg"
+  },
+  "beaver": {
+    "filled": "assets/filled/beaver.svg",
+    "plain": "assets/plain/beaver.svg"
+  },
+  "bee": {
+    "filled": "assets/filled/bee.svg",
+    "plain": "assets/plain/bee.svg"
+  },
+  "beetle": {
+    "filled": "assets/filled/beetle.svg",
+    "plain": "assets/plain/beetle.svg"
+  },
+  "bird": {
+    "filled": "assets/filled/bird.svg",
+    "plain": "assets/plain/bird.svg"
+  },
+  "boar": {
+    "filled": "assets/filled/boar.svg",
+    "plain": "assets/plain/boar.svg"
+  },
+  "buffalo": {
+    "filled": "assets/filled/buffalo.svg",
+    "plain": "assets/plain/buffalo.svg"
+  },
+  "butterfly": {
+    "filled": "assets/filled/butterfly.svg",
+    "plain": "assets/plain/butterfly.svg"
+  },
+  "camel": {
+    "filled": "assets/filled/camel.svg",
+    "plain": "assets/plain/camel.svg"
+  },
+  "cat": {
+    "filled": "assets/filled/cat.svg",
+    "plain": "assets/plain/cat.svg"
+  },
+  "chameleon": {
+    "filled": "assets/filled/chameleon.svg",
+    "plain": "assets/plain/chameleon.svg"
+  },
+  "chicken": {
+    "filled": "assets/filled/chicken.svg",
+    "plain": "assets/plain/chicken.svg"
+  },
+  "cow": {
+    "filled": "assets/filled/cow.svg",
+    "plain": "assets/plain/cow.svg"
+  },
+  "crab": {
+    "filled": "assets/filled/crab.svg",
+    "plain": "assets/plain/crab.svg"
+  },
+  "crocodile": {
+    "filled": "assets/filled/crocodile.svg",
+    "plain": "assets/plain/crocodile.svg"
+  },
+  "deer": {
+    "filled": "assets/filled/deer.svg",
+    "plain": "assets/plain/deer.svg"
+  },
+  "dog": {
+    "filled": "assets/filled/dog.svg",
+    "plain": "assets/plain/dog.svg"
+  },
+  "elephant": {
+    "filled": "assets/filled/elephant.svg",
+    "plain": "assets/plain/elephant.svg"
+  },
+  "fish": {
+    "filled": "assets/filled/fish.svg",
+    "plain": "assets/plain/fish.svg"
+  },
+  "flamingo": {
+    "filled": "assets/filled/flamingo.svg",
+    "plain": "assets/plain/flamingo.svg"
+  },
+  "fox": {
+    "filled": "assets/filled/fox.svg",
+    "plain": "assets/plain/fox.svg"
+  },
+  "frog": {
+    "filled": "assets/filled/frog.svg",
+    "plain": "assets/plain/frog.svg"
+  },
+  "giraffe": {
+    "filled": "assets/filled/giraffe.svg",
+    "plain": "assets/plain/giraffe.svg"
+  },
+  "gorilla": {
+    "filled": "assets/filled/gorilla.svg",
+    "plain": "assets/plain/gorilla.svg"
+  },
+  "hedgehog": {
+    "filled": "assets/filled/hedgehog.svg",
+    "plain": "assets/plain/hedgehog.svg"
+  },
+  "hippo": {
+    "filled": "assets/filled/hippo.svg",
+    "plain": "assets/plain/hippo.svg"
+  },
+  "horse": {
+    "filled": "assets/filled/horse.svg",
+    "plain": "assets/plain/horse.svg"
+  },
+  "ladybug": {
+    "filled": "assets/filled/ladybug.svg",
+    "plain": "assets/plain/ladybug.svg"
+  },
+  "lama": {
+    "filled": "assets/filled/lama.svg",
+    "plain": "assets/plain/lama.svg"
+  },
+  "lion": {
+    "filled": "assets/filled/lion.svg",
+    "plain": "assets/plain/lion.svg"
+  },
+  "mouse": {
+    "filled": "assets/filled/mouse.svg",
+    "plain": "assets/plain/mouse.svg"
+  },
+  "owl": {
+    "filled": "assets/filled/owl.svg",
+    "plain": "assets/plain/owl.svg"
+  },
+  "panda": {
+    "filled": "assets/filled/panda.svg",
+    "plain": "assets/plain/panda.svg"
+  },
+  "parrot": {
+    "filled": "assets/filled/parrot.svg",
+    "plain": "assets/plain/parrot.svg"
+  },
+  "penguin": {
+    "filled": "assets/filled/penguin.svg",
+    "plain": "assets/plain/penguin.svg"
+  },
+  "pig": {
+    "filled": "assets/filled/pig.svg",
+    "plain": "assets/plain/pig.svg"
+  },
+  "platypus": {
+    "filled": "assets/filled/platypus.svg",
+    "plain": "assets/plain/platypus.svg"
+  },
+  "rabbit": {
+    "filled": "assets/filled/rabbit.svg",
+    "plain": "assets/plain/rabbit.svg"
+  },
+  "rhino": {
+    "filled": "assets/filled/rhino.svg",
+    "plain": "assets/plain/rhino.svg"
+  },
+  "shark": {
+    "filled": "assets/filled/shark.svg",
+    "plain": "assets/plain/shark.svg"
+  },
+  "sheep": {
+    "filled": "assets/filled/sheep.svg",
+    "plain": "assets/plain/sheep.svg"
+  },
+  "sloth": {
+    "filled": "assets/filled/sloth.svg",
+    "plain": "assets/plain/sloth.svg"
+  },
+  "snake": {
+    "filled": "assets/filled/snake.svg",
+    "plain": "assets/plain/snake.svg"
+  },
+  "spider": {
+    "filled": "assets/filled/spider.svg",
+    "plain": "assets/plain/spider.svg"
+  },
+  "squid": {
+    "filled": "assets/filled/squid.svg",
+    "plain": "assets/plain/squid.svg"
+  },
+  "stingray": {
+    "filled": "assets/filled/stingray.svg",
+    "plain": "assets/plain/stingray.svg"
+  },
+  "turtle": {
+    "filled": "assets/filled/turtle.svg",
+    "plain": "assets/plain/turtle.svg"
+  },
+  "walrus": {
+    "filled": "assets/filled/walrus.svg",
+    "plain": "assets/plain/walrus.svg"
+  },
+  "whale": {
+    "filled": "assets/filled/whale.svg",
+    "plain": "assets/plain/whale.svg"
+  },
+  "zebra": {
+    "filled": "assets/filled/zebra.svg",
+    "plain": "assets/plain/zebra.svg"
+  }
+}

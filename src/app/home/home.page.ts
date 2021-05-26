@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+
+import { WhatAnimalIsItPage } from '../what-animal-is-it/what-animal-is-it.page';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +9,9 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  constructor(private modalCtrl: ModalController) {}
 
-  constructor() {}
-
+  async onClick() {
+    (await this.modalCtrl.create({ component: WhatAnimalIsItPage })).present();
+  }
 }
