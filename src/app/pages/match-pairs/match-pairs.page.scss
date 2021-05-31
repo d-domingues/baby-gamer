@@ -1,0 +1,23 @@
+ion-title {
+  font-family: 'FrederickatheGreat';
+  font-size: 50px;
+}
+
+ion-content {
+  --background: url('/assets/wallpapers/pandas.jpg') mistyrose;
+  --padding-top: 20px;
+  --padding-bottom: 20px;
+  --padding-start: 20px;
+  --padding-end: 20px;
+}
+
+.board {
+  height: 100%;
+  font-size: 0;
+
+  fply-flip-card {
+    height: calc(25% - 12px);
+    width: calc(50% - 12px);
+    margin: 6px;
+  }
+}

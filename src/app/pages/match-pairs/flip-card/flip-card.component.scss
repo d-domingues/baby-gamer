@@ -1,0 +1,35 @@
+:host {
+  display: block;
+  perspective: 600px;
+  display: inline-block;
+}
+
+.card-wrapper {
+  box-shadow: rgb(181 95 95 / 30%) 0px 1px 2px 0px, rgb(137 212 78 / 55%) 0px 1px 3px 1px;
+  border-radius: 5px;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.face {
+  display: block;
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  backface-visibility: hidden;
+
+  > img {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+    border-radius: inherit;
+  }
+}
+
+.front {
+  transform: rotateY(180deg);
+}

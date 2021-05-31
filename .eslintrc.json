@@ -1,18 +1,11 @@
 {
   "root": true,
-  "ignorePatterns": [
-    "projects/**/*"
-  ],
+  "ignorePatterns": ["projects/**/*"],
   "overrides": [
     {
-      "files": [
-        "*.ts"
-      ],
+      "files": ["*.ts"],
       "parserOptions": {
-        "project": [
-          "tsconfig.json",
-          "e2e/tsconfig.json"
-        ],
+        "project": ["tsconfig.json", "e2e/tsconfig.json"],
         "createDefaultProgram": true
       },
       "extends": [
@@ -22,29 +15,22 @@
       "rules": {
         "@angular-eslint/component-selector": [
           "error",
-          {
-            "prefix": "app",
-            "style": "kebab-case",
-            "type": "element"
-          }
+          { "prefix": "bbg", "style": "kebab-case", "type": "element" }
         ],
         "@angular-eslint/directive-selector": [
           "error",
-          {
-            "prefix": "app",
-            "style": "camelCase",
-            "type": "attribute"
-          }
+          { "prefix": "bbg", "style": "camelCase", "type": "attribute" }
+        ],
+        "@angular-eslint/component-class-suffix": [
+          "error",
+          { "suffixes": ["Page", "Component"] }
         ]
+        //     "@angular-eslint/use-lifecycle-interface": false
       }
     },
     {
-      "files": [
-        "*.html"
-      ],
-      "extends": [
-        "plugin:@angular-eslint/template/recommended"
-      ],
+      "files": ["*.html"],
+      "extends": ["plugin:@angular-eslint/template/recommended"],
       "rules": {}
     }
   ]
