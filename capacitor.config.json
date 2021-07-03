@@ -1,5 +1,5 @@
 {
-  "appId": "io.ionic.starter",
+  "appId": "com.ddomingues.babygamer",
   "appName": "baby-gamer",
   "bundledWebRuntime": false,
   "npmClient": "npm",

@@ -27,5 +27,7 @@ export class HomePage {
     this.file
       .listDir(this.file.applicationDirectory, 'public/assets/audio')
       .then((entries) => entries.map((e) => e.name));
+
+    //  Filesystem.readdir();
   };
 }
