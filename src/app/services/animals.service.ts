@@ -12,10 +12,6 @@ export class AnimalsService implements Resolve<Promise<Animal>> {
       .then((resp) => resp.json())
       .then((resp) => (this.animals = resp));
 
-  getRandom = (qty: number): Animal[] => [
-    { name: 'fish', img: 'fish', nameAudio: 'fish', sound: 'fish' },
-    { name: 'camel', img: 'camel', nameAudio: 'camel', sound: 'camel' },
-    { name: 'cat', img: 'cat', nameAudio: 'cat', sound: 'cat' },
-    { name: 'crab', img: 'crab', nameAudio: 'crab', sound: 'crab' },
-  ];
+  getRandom = (n: number): Animal[] =>
+    this.animals.sort(() => 0.5 - Math.random()).slice(0, n);
 }
