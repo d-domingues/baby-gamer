@@ -6,11 +6,11 @@ import { Platform } from '@ionic/angular';
 @Injectable({ providedIn: 'root' })
 export class AudioService {
   constructor(
-    public platform: Platform,
+    private platform: Platform,
     private file: File,
     private nativeAudio: NativeAudio
   ) {
-    if (this.platform.is('android')) {
+    /*  if (this.platform.is('android')) {
       this.file
         .listDir(this.file.applicationDirectory, 'public/assets/audio')
         .then((entries) =>
@@ -21,6 +21,6 @@ export class AudioService {
             )
           )
         );
-    }
+    } */
   }
 }

@@ -1,23 +1,14 @@
-ion-title {
-  font-family: 'FrederickatheGreat';
-  font-size: 50px;
-}
-
 ion-content {
-  --background: url('/assets/wallpapers/pandas.jpg') mistyrose;
-  --padding-top: 20px;
-  --padding-bottom: 20px;
-  --padding-start: 20px;
-  --padding-end: 20px;
-}
+  --background: url("/assets/wallpapers/pandas.jpg") mistyrose;
+  --card-height: calc(25vh - 30px);
+  --card-width: calc(50% - 6px);
 
-.board {
-  height: 100%;
-  font-size: 0;
-
-  fply-flip-card {
-    height: calc(25% - 12px);
-    width: calc(50% - 12px);
-    margin: 6px;
+  .board {
+    perspective: 1600px;
+    display: grid;
+    grid-template-columns: repeat(2, var(--card-width));
+    grid-template-rows: repeat(4, var(--card-height));
+    gap: 12px;
+    margin: 12px;
   }
 }

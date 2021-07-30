@@ -1,28 +1,19 @@
 import { animate, AnimationEvent, state, style, transition, trigger } from '@angular/animations';
 import { Component, Host, Input } from '@angular/core';
-import { Figure } from 'src/app/models/figure';
 import { PlayerService } from 'src/app/services/player.service';
 
 import { MatchPairsPage } from '../match-pairs.page';
 
 @Component({
-  selector: 'fply-flip-card',
+  selector: 'bbg-flip-card',
   styleUrls: ['flip-card.component.scss'],
   template: `
-    <div
-      class="card-wrapper"
-      [@cardFlip]="flipped"
-      (click)="onClick()"
-      (@cardFlip.start)="host.isViewBlocked = true"
-      (@cardFlip.done)="animDone($event)"
-    >
-      <div class="face front">
-        <img [src]="figure.src" />
-      </div>
-      <div class="face back">
-        <img src="assets/img/card_back.png" />
-      </div>
-    </div>
+    <img
+      bonbon
+      class="face front"
+      [src]="'assets/animals/' + figure + '.svg'"
+    />
+    <div bonbon class="face back-side"></div>
   `,
   animations: [
     trigger('cardFlip', [
@@ -32,14 +23,24 @@ import { MatchPairsPage } from '../match-pairs.page';
       transition('true => false', animate('.2s .5s')),
     ]),
   ],
+  // eslint-disable-next-line @angular-eslint/no-host-metadata-property
+  host: {
+    '[@cardFlip]': 'flipped',
+    '(click)': 'onClick()',
+    '(@cardFlip.start)': 'host.isViewBlocked = true',
+    '(@cardFlip.done)': 'animDone($event)',
+  },
 })
 export class FlipCardComponent {
-  @Input() figure: Figure;
+  @Input() figure: string;
   @Input() cardIdx: number;
   flipped = false;
   matched = false;
 
-  constructor(@Host() public host: MatchPairsPage, private player: PlayerService) {}
+  constructor(
+    @Host() public host: MatchPairsPage,
+    private player: PlayerService
+  ) {}
 
   onClick() {
     if (this.flipped || this.host.isViewBlocked) {
@@ -66,7 +67,7 @@ export class FlipCardComponent {
     }
 
     // success
-    if (this.host.currentFigure.id === this.figure.id) {
+    if (this.host.currentFigure === this.figure) {
       this.player.playCorrect();
       this.matched = true;
       this.host.currentCard.matched = true;

@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
-import { Resolve } from '@angular/router';
 import { Figure } from 'src/models/figure';
 
 @Injectable({ providedIn: 'root' })
-export class FigureService implements Resolve<Promise<Figure>> {
+export class FigureService {
   figures: Figure[] = [];
 
-  resolve = () =>
+  constructor() {
     fetch('assets/data/family.json')
       .then((resp) => resp.json())
       .then((resp) => (this.figures = resp));
+  }
 
   shuffleFigures = (figures: Figure[]) =>
     figures.sort(() => Math.random() - 0.5);

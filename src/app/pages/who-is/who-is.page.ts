@@ -1,38 +1,37 @@
 import { Component } from '@angular/core';
 import { ToastController } from '@ionic/angular';
+import { Animal } from 'src/models/animal';
 
-import { Figure } from '../models/figure';
-import { FigureService } from '../services/figure.service';
-import { PlayerService } from '../services/player.service';
+import { AnimalsService } from './../../services/animals.service';
 
 @Component({
   templateUrl: 'who-is.page.html',
   styleUrls: ['who-is.page.scss'],
 })
 export class WhoIsPage {
-  figures: Figure[];
+  figures: Animal[];
   currentIdx: number;
-  options: Figure[];
+  options: Animal[];
 
   constructor(
-    private figService: FigureService,
-    private player: PlayerService,
+    private figService: AnimalsService,
+    // private player: PlayerService,
     private toastController: ToastController
   ) {
-    this.figures = this.figService.getShuffledFigures();
+    //  this.figures = this.figService.getShuffledFigures();
     this.currentIdx = 0;
     this.setOptions();
 
     // todo: add , height=device-height to viewport at indext.html (test)
   }
 
-  select(opt: Figure) {
+  select(opt: Animal) {
     if (this.figures[this.currentIdx].id === opt.id) {
       console.log('correct');
-      this.player.playByName('correct_answer.mp3', this.next.bind(this));
+      // this.player.playByName('correct_answer.mp3', this.next.bind(this));
       this.presentToast();
     } else {
-      this.player.playByName('wrong_answer.mp3');
+      //  this.player.playByName('wrong_answer.mp3');
     }
   }
 
@@ -43,12 +42,12 @@ export class WhoIsPage {
   }
 
   setOptions() {
-    const correctOpt = this.figures[this.currentIdx];
+    /*     const correctOpt = this.figures[this.currentIdx];
     const incorrectOpt = this.figService
       .getShuffledFigures()
       .filter((f) => f.id !== this.figures[this.currentIdx].id)[0];
 
-    this.options = [correctOpt, incorrectOpt].sort(() => Math.random() - 0.5);
+    this.options = [correctOpt, incorrectOpt].sort(() => Math.random() - 0.5); */
   }
 
   get progress() {

@@ -7,8 +7,21 @@ import { Figure } from 'src/models/figure';
 
 @Component({
   selector: 'bbg-family-gallery',
-  templateUrl: './family-gallery.page.html',
   styleUrls: ['./family-gallery.page.scss'],
+  template: `
+    <bbg-header></bbg-header>
+
+    <ion-content>
+      <div class="gallery-grid">
+        <img
+          bonbon="btn"
+          *ngFor="let fig of figures"
+          [src]="fig.src"
+          (click)="onPlay(fig.id)"
+        />
+      </div>
+    </ion-content>
+  `,
 })
 export class FamilyGalleryPage {
   figures: Figure[] = this.figService.figures;

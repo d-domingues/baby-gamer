@@ -1,22 +1,23 @@
 import { Component, QueryList, ViewChildren } from '@angular/core';
+import { AnimalsService } from 'src/app/services/animals.service';
 
-import { FigureService } from '../services/figure.service';
 import { FlipCardComponent } from './flip-card/flip-card.component';
 
 @Component({
-  selector: 'fply-match-pairs',
+  selector: 'bbg-match-pairs',
   styleUrls: ['match-pairs.page.scss'],
   template: `
-    <ion-header>
-      <ion-toolbar>
-        <ion-title> Pares </ion-title>
-      </ion-toolbar>
-    </ion-header>
+    <bbg-header></bbg-header>
 
     <ion-content>
       <div class="board">
-        <fply-flip-card #card *ngFor="let figure of figures; let i = index" [figure]="figure" [cardIdx]="i">
-        </fply-flip-card>
+        <bbg-flip-card
+          #card
+          *ngFor="let fig of animals; let i = index"
+          [figure]="fig"
+          [cardIdx]="i"
+        >
+        </bbg-flip-card>
       </div>
     </ion-content>
   `,
@@ -24,18 +25,18 @@ import { FlipCardComponent } from './flip-card/flip-card.component';
 export class MatchPairsPage {
   currentIdx: number = -1;
 
-  figures = this.figService.getNShuffledPais(4);
+  animals = this.animalService.getRandomPairs(4);
   @ViewChildren('card') cards: QueryList<FlipCardComponent>;
 
   isViewBlocked = false;
 
   get currentFigure() {
-    return this.figures[this.currentIdx];
+    return this.animals[this.currentIdx];
   }
 
   get currentCard() {
     return this.cards.toArray()[this.currentIdx];
   }
 
-  constructor(private figService: FigureService) {}
+  constructor(private animalService: AnimalsService) {}
 }

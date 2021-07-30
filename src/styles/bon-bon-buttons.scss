@@ -24,7 +24,36 @@ Following additional class names are supported:
 //@import url(http://fonts.googleapis.com/css?family=Lobster);
 
 /* -------------- THE button -------------- */
+
+/* :root {
+
+}
+ */
 [bonbon] {
+  --hue: 0deg;
+  --sat: 100%;
+  --lig: 0%;
+
+  --color-hue: var(--hue);
+  --color-sat: var(--sat);
+  --color-lig: var(--lig);
+
+  --bg-color-hue: var(--hue);
+  --bg-color-sat: var(--sat);
+  --bg-color-lig: calc(var(--lig) + 30%);
+
+  --bs-top-hue: var(--hue);
+  --bs-top-sat: var(--sat);
+  --bs-top-lig: calc(var(--lig) + 15%);
+
+  --bs-bot-hue: var(--hue);
+  --bs-bot-sat: var(--sat);
+  --bs-bot-lig: var(--lig);
+
+  --hover-hue: var(--hue);
+  --hover-sat: var(--sat);
+  --hover-lig: calc(var(--lig) + 40%);
+
   /* text */
   text-decoration: none;
   font: 24px/1em "Droid Sans", sans-serif;
@@ -75,71 +104,83 @@ Following additional class names are supported:
   -moz-transition: background 0.2s ease-in-out;
   transition: background 0.2s ease-in-out;
 
-  /* color */
-  color: hsl(0, 0%, 40%) !important;
-  background-color: hsl(0, 0%, 75%);
+  /* colors */
+  color: hsl(var(--color-hue) var(--color-sat) var(--color-lig)) !important;
 
-  -webkit-box-shadow: inset rgba(255, 254, 255, 0.6) 0 0.3em 0.3em,
-    inset rgba(0, 0, 0, 0.15) 0 -0.1em 0.3em, hsl(0, 0%, 60%) 0 0.1em 3px,
-    hsl(0, 0%, 45%) 0 0.3em 1px, rgba(0, 0, 0, 0.2) 0 0.5em 5px;
-  -moz-box-shadow: inset rgba(255, 254, 255, 0.6) 0 0.3em 0.3em,
-    inset rgba(0, 0, 0, 0.15) 0 -0.1em 0.3em, hsl(0, 0%, 60%) 0 0.1em 3px,
-    hsl(0, 0%, 45%) 0 0.3em 1px, rgba(0, 0, 0, 0.2) 0 0.5em 5px;
-  box-shadow: inset rgba(255, 254, 255, 0.6) 0 0.3em 0.3em,
-    inset rgba(0, 0, 0, 0.15) 0 -0.1em 0.3em, hsl(0, 0%, 60%) 0 0.1em 3px,
-    hsl(0, 0%, 45%) 0 0.3em 1px, rgba(0, 0, 0, 0.2) 0 0.5em 5px;
+  background-color: hsl(
+    var(--bg-color-hue) var(--bg-color-sat) var(--bg-color-lig)
+  );
+
+  --box-shadow: inset rgba(255, 254, 255, 0.6) 0 0.3em 0.3em,
+    inset rgba(0, 0, 0, 0.15) 0 -0.1em 0.3em,
+    hsl(var(--bs-top-hue) var(--bs-top-sat) var(--bs-top-lig)) 0 0.1em 3px,
+    hsl(var(--bs-bot-hue) var(--bs-bot-sat) var(--bs-bot-lig)) 0 0.3em 1px,
+    rgba(0, 0, 0, 0.2) 0 0.5em 5px;
+
+  -webkit-box-shadow: var(--box-shadow);
+  -moz-box-shadow: var(--box-shadow);
+  box-shadow: var(--box-shadow);
+
+  &:hover {
+    background-color: hsl(var(--hover-hue) var(--hover-sat) var(--hover-lig));
+  }
 }
 
-[bonbon]:not(img) {
-  padding: 0.5em 0.6em 0.4em 0.6em;
-  margin: 0.5em;
-}
-
-/* -------------- icon -------------- */
-[bonbon]:before {
-  font: 1.2em/0 sans-serif;
-  /* gets the icon value from the custom data attribute and puts it infront of the button label */
-  content: attr(data-icon);
-  margin-right: 6px;
-}
-
-/* icon only */
-.icon {
-  font-weight: normal;
-  font-style: normal;
-}
-.icon:before {
-  display: block;
-  height: 0.75em;
-  line-height: 0.75em;
-  margin: 0;
+button[bonbon] {
+  padding: 10px 5px;
 }
 
 /* -------------- colours -------------- */
+/* default */
+[bonbon] {
+  --color-hue: 0deg;
+  --color-sat: 0%;
+  --color-lig: 45%;
 
+  --bg-color-hue: 0deg;
+  --bg-color-sat: 0%;
+  --bg-color-lig: 75%;
+
+  --bs-top-hue: 0deg;
+  --bs-top-sat: 0%;
+  --bs-top-lig: 60%;
+
+  --bs-bot-hue: 0deg;
+  --bs-bot-sat: 0%;
+  --bs-bot-lig: 45%;
+
+  --hover-hue: 0deg;
+  --hover-sat: 0%;
+  --hover-lig: 83%;
+}
+
+/* orange */
 [bonbon].orange {
-  color: hsl(39, 100%, 30%) !important;
-  background-color: hsl(39, 100%, 50%);
+  --color-hue: 39deg;
+  --color-sat: 100%;
+  --color-lig: 30%;
 
-  -webkit-box-shadow: inset rgba(255, 254, 255, 0.6) 0 0.3em 0.3em,
-    inset rgba(0, 0, 0, 0.15) 0 -0.1em 0.3em, hsl(39, 100%, 40%) 0 0.1em 3px,
-    hsl(39, 100%, 30%) 0 0.3em 1px, rgba(0, 0, 0, 0.2) 0 0.5em 5px;
-  -moz-box-shadow: inset rgba(255, 254, 255, 0.6) 0 0.3em 0.3em,
-    inset rgba(0, 0, 0, 0.15) 0 -0.1em 0.3em, hsl(39, 100%, 40%) 0 0.1em 3px,
-    hsl(39, 100%, 30%) 0 0.3em 1px, rgba(0, 0, 0, 0.2) 0 0.5em 5px;
-  box-shadow: inset rgba(255, 254, 255, 0.6) 0 0.3em 0.3em,
-    inset rgba(0, 0, 0, 0.15) 0 -0.1em 0.3em, hsl(39, 100%, 40%) 0 0.1em 3px,
-    hsl(39, 100%, 30%) 0 0.3em 1px, rgba(0, 0, 0, 0.2) 0 0.5em 5px;
+  --bg-color-hue: 39deg;
+  --bg-color-sat: 100%;
+  --bg-color-lig: 50%;
+
+  --bs-top-hue: 39deg;
+  --bs-top-sat: 100%;
+  --bs-top-lig: 40%;
+
+  --bs-bot-hue: 39deg;
+  --bs-bot-sat: 100%;
+  --bs-bot-lig: 30%;
+
+  --hover-hue: 39deg;
+  --hover-sat: 100%;
+  --hover-lig: 65%;
 }
 
-[bonbon].orange:hover {
-  background-color: hsl(39, 100%, 65%);
-}
-
+/* blue */
 [bonbon].blue {
   color: hsl(208, 50%, 40%) !important;
   background-color: hsl(208, 100%, 75%);
-
   -webkit-box-shadow: inset rgba(255, 254, 255, 0.6) 0 0.3em 0.3em,
     inset rgba(0, 0, 0, 0.15) 0 -0.1em 0.3em, hsl(208, 50%, 55%) 0 0.1em 3px,
     hsl(208, 50%, 40%) 0 0.3em 1px, rgba(0, 0, 0, 0.2) 0 0.5em 5px;
@@ -149,12 +190,12 @@ Following additional class names are supported:
   box-shadow: inset rgba(255, 254, 255, 0.6) 0 0.3em 0.3em,
     inset rgba(0, 0, 0, 0.15) 0 -0.1em 0.3em, hsl(208, 50%, 55%) 0 0.1em 3px,
     hsl(208, 50%, 40%) 0 0.3em 1px, rgba(0, 0, 0, 0.2) 0 0.5em 5px;
+  &:hover {
+    background-color: hsl(208, 100%, 83%);
+  }
 }
 
-[bonbon].blue:hover {
-  background-color: hsl(208, 100%, 83%);
-}
-
+/* green */
 [bonbon].green {
   color: hsl(88, 70%, 30%) !important;
   background-color: hsl(88, 70%, 60%);
@@ -167,12 +208,12 @@ Following additional class names are supported:
   box-shadow: inset rgba(255, 254, 255, 0.6) 0 0.3em 0.3em,
     inset rgba(0, 0, 0, 0.15) 0 -0.1em 0.3em, hsl(88, 70%, 40%) 0 0.1em 3px,
     hsl(88, 70%, 30%) 0 0.3em 1px, rgba(0, 0, 0, 0.2) 0 0.5em 5px;
+  &:hover {
+    background-color: hsl(88, 70%, 75%);
+  }
 }
 
-[bonbon].green:hover {
-  background-color: hsl(88, 70%, 75%);
-}
-
+/* pink */
 [bonbon].pink {
   color: hsl(340, 100%, 30%) !important;
   background-color: hsl(340, 100%, 75%);
@@ -185,10 +226,9 @@ Following additional class names are supported:
   box-shadow: inset rgba(255, 254, 255, 0.6) 0 0.3em 0.3em,
     inset rgba(0, 0, 0, 0.15) 0 -0.1em 0.3em, hsl(340, 70%, 50%) 0 0.1em 3px,
     hsl(340, 80%, 40%) 0 0.3em 1px, rgba(0, 0, 0, 0.2) 0 0.5em 5px;
-}
-
-[bonbon].pink:hover {
-  background-color: hsl(340, 100%, 83%);
+  &:hover {
+    background-color: hsl(340, 100%, 83%);
+  }
 }
 
 [bonbon].transparent {
@@ -207,11 +247,7 @@ Following additional class names are supported:
 }
 
 /* -------------- States -------------- */
-[bonbon]:hover {
-  background-color: hsl(0, 0%, 83%);
-}
-
-[bonbon]:active {
+[bonbon="btn"]:active {
   background-image: -webkit-gradient(
     radial,
     50% 0,

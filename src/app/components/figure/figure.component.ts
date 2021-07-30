@@ -1,19 +1,18 @@
 import { Component, Input } from '@angular/core';
-import { Figure } from 'src/app/models/figure';
 import { PlayerService } from 'src/app/services/player.service';
 
 @Component({
-  selector: 'fun-figure',
-  templateUrl: './figure.component.html',
-  styleUrls: ['./figure.component.scss'],
+  selector: 'bbg-figure',
+  styles: ['img { padding: 8%; }'],
+  template: `
+    <img [src]="'assets/animals/' + figure + '.svg'" (click)="onPlay()" />
+  `,
 })
 export class FigureComponent {
-  @Input() figure: Figure;
+  @Input() figure: string;
   @Input() text?: string;
 
-  constructor(private player: PlayerService) {}
+  constructor(public player: PlayerService) {}
 
-  play() {
-    this.player.play(this.figure.soundSrc);
-  }
+  onPlay = () => this.player.playByName(this.figure);
 }

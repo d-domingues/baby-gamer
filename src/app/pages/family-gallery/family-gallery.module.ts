@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
+import { HeaderModule } from './../../components/header/header.module';
 import { FamilyGalleryPage } from './family-gallery.page';
 
 const routes: Routes = [{ path: '', component: FamilyGalleryPage }];
@@ -14,6 +15,7 @@ const routes: Routes = [{ path: '', component: FamilyGalleryPage }];
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes),
+    HeaderModule,
   ],
   declarations: [FamilyGalleryPage],
 })

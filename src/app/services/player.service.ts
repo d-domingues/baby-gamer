@@ -1,44 +1,33 @@
 import { Injectable } from '@angular/core';
 import { Howl } from 'howler';
 
-@Injectable({
-  providedIn: 'root',
-})
+export type PayerResp = 'BUSY' | 'LOAD_ERROR' | 'DONE';
+
+@Injectable({ providedIn: 'root' })
 export class PlayerService {
-  private player: Howl = null;
-  private isPlaying = false;
-  private activeSoundSrc: string;
+  private busy = false;
+  private readonly mp3AssetsPath = 'assets/';
 
-  private mp3AssetsPath = '../../../assets/mp3/';
+  play = (soundSrc: string) =>
+    new Promise<PayerResp>((res, rej) => {
+      if (this.busy) {
+        return rej('BUSY');
+      }
 
-  constructor() {}
-
-  play(soundSrc: string, calbackFn?: () => void) {
-    if (this.isPlaying) {
-      return;
-    }
-
-    this.player = new Howl({
-      src: [soundSrc],
-      onplay: () => {
-        this.isPlaying = true;
-        this.activeSoundSrc = soundSrc;
-      },
-      onend: () => {
-        this.isPlaying = false;
-        if (calbackFn) {
-          calbackFn();
-        }
-      },
+      new Howl({
+        src: [this.mp3AssetsPath + soundSrc],
+        onloaderror: () => rej('LOAD_ERROR'),
+        onplay: () => (this.busy = true),
+        onend: () => {
+          this.busy = false;
+          res('DONE');
+        },
+      }).play();
     });
 
-    this.player.play();
-  }
+  playByName = (audioName: string) => this.play(`animals/${audioName}.mp3`);
 
-  playByName(audioName: string, calbackFn?: () => void) {
-    this.play(this.mp3AssetsPath + audioName, calbackFn);
-  }
+  playCorrect = () => this.play('audio/correct_answer.mp3');
 
-  playCorrect = () => this.playByName('correct_answer.mp3');
-  playWrong = () => this.playByName('wrong_answer.mp3');
+  playWrong = () => this.play('audio/wrong_answer.mp3');
 }
