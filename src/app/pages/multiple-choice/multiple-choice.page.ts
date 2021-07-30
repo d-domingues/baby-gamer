@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AnimalsService } from 'src/app/services/animals.service';
+import { AnimalsService, MultipleChoiceElements } from 'src/app/services/animals.service';
 import { PlayerService } from 'src/app/services/player.service';
 
 @Component({
@@ -18,27 +18,25 @@ import { PlayerService } from 'src/app/services/player.service';
   template: `
     <bbg-header></bbg-header>
     <ion-progress-bar value="0.5"></ion-progress-bar>
-    <bbg-figure [figure]="animals[correctAnswer]"></bbg-figure>
+    <bbg-figure [figure]="first.answer"></bbg-figure>
     <ion-content>
       <button
         bonbon
         class="option {{ colors[i] }}"
-        *ngFor="let animal of animals; let i = index"
-        (click)="i === correctAnswer ? onSuccess() : onFailure()"
+        *ngFor="let animal of first.options; let i = index"
+        (click)="first.answer.id === animal.id ? onSuccess() : onFailure()"
       >
-        {{ animal }}
+        {{ animal.pt }}
       </button>
-
-      {{ elements | json }}
     </ion-content>
   `,
 })
 export class MultipleChoicePage {
   colors = ['orange', 'pink', 'blue', 'green'];
-  animals = this.animalServ.getRandom(4);
-  correctAnswer = this.animalServ.randBetween(0, 3);
+  elements: MultipleChoiceElements[] =
+    this.animalServ.getMultipleChoiseElements();
 
-  elements = this.animalServ.getMultipleChoiseElements();
+  first = this.elements[0];
 
   constructor(
     private animalServ: AnimalsService,

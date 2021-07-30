@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AnimalsService } from 'src/app/services/animals.service';
+import { Animal } from 'src/models/animal';
 
 @Component({
   selector: 'bbg-collection',
@@ -9,15 +10,17 @@ import { AnimalsService } from 'src/app/services/animals.service';
 
     <ion-content>
       <div class="grid">
-        <bbg-figure
-          bonbon
-          *ngFor="let animal of animalService.animals"
-          [figure]="animal"
-        ></bbg-figure>
+        <bbg-figure bonbon *ngFor="let animal of animals" [figure]="animal">
+          <div class="animal-name">{{ animal.pt }}</div>
+        </bbg-figure>
       </div>
     </ion-content>
   `,
 })
 export class CollectionPage {
-  constructor(public animalService: AnimalsService) {}
+  animals: Animal[] = [];
+
+  constructor(public animalService: AnimalsService) {
+    animalService.resolve().then((animals) => (this.animals = animals));
+  }
 }

@@ -6,8 +6,8 @@ import { NativeAudio } from '@ionic-native/native-audio/ngx';
 import { SpeechRecognition } from '@ionic-native/speech-recognition/ngx';
 import { IonicModule } from '@ionic/angular';
 import { AnimalsService } from 'src/app/services/animals.service';
+import { PlayerService } from 'src/app/services/player.service';
 
-import { WhatAnimalIsItPage } from '../what-animal-is-it/what-animal-is-it.page';
 import { HomePage } from './home.page';
 
 @NgModule({
@@ -16,10 +16,14 @@ import { HomePage } from './home.page';
     FormsModule,
     IonicModule,
     RouterModule.forChild([
-      { path: '', component: HomePage, resolve: [AnimalsService] },
+      {
+        path: '',
+        component: HomePage,
+        resolve: [AnimalsService, PlayerService],
+      },
     ]),
   ],
-  declarations: [HomePage, WhatAnimalIsItPage],
+  declarations: [HomePage],
   providers: [NativeAudio, SpeechRecognition],
 })
 export class HomePageModule {}

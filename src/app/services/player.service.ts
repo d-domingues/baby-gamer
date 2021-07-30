@@ -1,12 +1,29 @@
 import { Injectable } from '@angular/core';
+import { Resolve } from '@angular/router';
 import { Howl } from 'howler';
+import { AnimalsService } from 'src/app/services/animals.service';
 
 export type PayerResp = 'BUSY' | 'LOAD_ERROR' | 'DONE';
 
 @Injectable({ providedIn: 'root' })
-export class PlayerService {
+export class PlayerService implements Resolve<Howl> {
   private busy = false;
   private readonly mp3AssetsPath = 'assets/';
+
+  constructor(private animalService: AnimalsService) {}
+
+  resolve = () => {
+    /*     setTimeout(() => {
+      const srces = this.animalService.animals.map(
+        (a) => `assets/animals/${a.name}.mp3`
+      );
+      srces.forEach((src) => new Howl({ src }))
+    }, 2000); */
+
+    //this.animalService.loadedAnimals.then((anim) => console.log(anim));
+
+    return null; // new Howl({});
+  };
 
   play = (soundSrc: string) =>
     new Promise<PayerResp>((res, rej) => {

@@ -1,6 +1,7 @@
 import { animate, AnimationEvent, state, style, transition, trigger } from '@angular/animations';
 import { Component, Host, Input } from '@angular/core';
 import { PlayerService } from 'src/app/services/player.service';
+import { Animal } from 'src/models/animal';
 
 import { MatchPairsPage } from '../match-pairs.page';
 
@@ -11,7 +12,7 @@ import { MatchPairsPage } from '../match-pairs.page';
     <img
       bonbon
       class="face front"
-      [src]="'assets/animals/' + figure + '.svg'"
+      [src]="'assets/animals/' + figure.name + '.svg'"
     />
     <div bonbon class="face back-side"></div>
   `,
@@ -32,7 +33,7 @@ import { MatchPairsPage } from '../match-pairs.page';
   },
 })
 export class FlipCardComponent {
-  @Input() figure: string;
+  @Input() figure: Animal;
   @Input() cardIdx: number;
   flipped = false;
   matched = false;
@@ -67,7 +68,7 @@ export class FlipCardComponent {
     }
 
     // success
-    if (this.host.currentFigure === this.figure) {
+    if (this.host.currentFigure.id === this.figure.id) {
       this.player.playCorrect();
       this.matched = true;
       this.host.currentCard.matched = true;

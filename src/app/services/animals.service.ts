@@ -1,69 +1,49 @@
 import { Injectable } from '@angular/core';
 import { Resolve } from '@angular/router';
-import { NativeAudio } from '@ionic-native/native-audio/ngx';
 
 import { Animal } from '../../models/animal';
 
 @Injectable({ providedIn: 'root' })
-export class AnimalsService implements Resolve<Promise<Animal>> {
-  animals: string[] = [];
-
-  constructor(private nativeAudio: NativeAudio) {
-    fetch('assets/animals/animals.json')
-      .then((resp) => resp.json())
-      .then((resp) => {
-        this.animals = resp;
-
-        this.animals.forEach((photo) => {
-          new Image().src = 'assets/animals/' + photo + '.svg';
-        });
-
-        // this.animals.forEach((a) => fetch('assets/animals/' + a + '.svg'));
-      });
-  }
+export class AnimalsService implements Resolve<Promise<Animal[]>> {
+  private animals: Animal[] = [];
 
   async resolve() {
-    /*     this.nativeAudio.preloadSimple(
-      e.name.replace(/\.[^/.]+$/, ''),
-      e.fullPath.substring(1)
-    );
-    */
-    /*
-    const req = await fetch('assets/animals/animals.json');
-    this.animals = await req.json();
-    this.animals.forEach((a) =>
-      this.nativeAudio.preloadSimple(a.name, `assets/audio/${a.name}.mp3`).then(
-        (suc) => console.log(a.name, suc),
-        (err) => console.log('err', err)
-      )
-    );
- */
-    return null;
+    if (!this.animals.length) {
+      const req = await fetch('assets/animals/animals.json');
+      this.animals = await req.json();
+
+      this.animals.forEach(
+        (animal) => (new Image().src = 'assets/animals/' + animal.name + '.svg')
+      );
+    }
+
+    this.animals;
+    return this.animals;
   }
 
-  getRandom = (n: number): string[] =>
+  getRandom = (n: number): Animal[] =>
     this.animals.sort(() => 0.5 - Math.random()).slice(0, n);
 
-  getRandomPairs = (n: number): string[] => {
+  getRandomPairs = (n: number): Animal[] => {
     const rand = this.getRandom(n);
     return [...rand, ...rand].sort(() => 0.5 - Math.random());
   };
 
-  randBetween = (min: number, max: number) =>
-    Math.floor(Math.random() * (max - min + 1) + min);
-
   getMultipleChoiseElements = (n = 5): MultipleChoiceElements[] => {
     const elements: MultipleChoiceElements[] = [];
 
+    const randBetween = (min: number, max: number) =>
+      Math.floor(Math.random() * (max - min + 1) + min);
+
     const generateElements = () => {
       const options = this.getRandom(4);
-      const answer = options[this.randBetween(0, 3)];
+      const answer = options[randBetween(0, 3)];
       return { answer, options };
     };
 
     while (elements.length < n) {
       const next = generateElements();
-      if (!elements.find((e) => e.answer === next.answer)) {
+      if (!elements.find((e) => e.answer.id === next.answer.id)) {
         elements.push(next);
       }
     }
@@ -73,6 +53,6 @@ export class AnimalsService implements Resolve<Promise<Animal>> {
 }
 
 export interface MultipleChoiceElements {
-  answer: string;
-  options: string[];
+  answer: Animal;
+  options: Animal[];
 }

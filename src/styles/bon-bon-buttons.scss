@@ -247,7 +247,7 @@ button[bonbon] {
 }
 
 /* -------------- States -------------- */
-[bonbon="btn"]:active {
+button[bonbon]:active {
   background-image: -webkit-gradient(
     radial,
     50% 0,

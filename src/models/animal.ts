@@ -1,6 +1,6 @@
 export interface Animal {
   name: string;
   id: number;
-  path: string;
+  pt: string;
   sound: string;
 }
