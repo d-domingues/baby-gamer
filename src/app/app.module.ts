@@ -12,18 +12,8 @@ import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [
-    BrowserModule,
-    IonicModule.forRoot({ backButtonText: '', mode: 'ios' }),
-    AppRoutingModule,
-    BrowserAnimationsModule,
-  ],
-  providers: [
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    SpeechRecognition,
-    NativeAudio,
-    File,
-  ],
+  imports: [BrowserModule, IonicModule.forRoot({ backButtonText: '', mode: 'ios' }), AppRoutingModule, BrowserAnimationsModule],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, SpeechRecognition, NativeAudio, File],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

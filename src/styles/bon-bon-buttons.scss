@@ -56,7 +56,7 @@ Following additional class names are supported:
 
   /* text */
   text-decoration: none;
-  font: 24px/1em "Droid Sans", sans-serif;
+  font: 24px/1em 'Droid Sans', sans-serif;
   font-weight: bold;
   text-shadow: rgba(255, 255, 255, 0.5) 0 1px 0;
   -webkit-user-select: none;
@@ -75,30 +75,9 @@ Following additional class names are supported:
   border-top: 1px solid rgba(255, 255, 255, 0.8);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
-  background-image: -webkit-gradient(
-    radial,
-    50% 0,
-    100,
-    50% 0,
-    0,
-    from(rgba(255, 255, 255, 0)),
-    to(rgba(255, 255, 255, 0.7))
-  );
-  background-image: -moz-radial-gradient(
-    top,
-    ellipse cover,
-    rgba(255, 255, 255, 0.7) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  background-image: gradient(
-    radial,
-    50% 0,
-    100,
-    50% 0,
-    0,
-    from(rgba(255, 255, 255, 0)),
-    to(rgba(255, 255, 255, 0.7))
-  );
+  background-image: -webkit-gradient(radial, 50% 0, 100, 50% 0, 0, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0.7)));
+  background-image: -moz-radial-gradient(top, ellipse cover, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 100%);
+  background-image: gradient(radial, 50% 0, 100, 50% 0, 0, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0.7)));
 
   -webkit-transition: background 0.2s ease-in-out;
   -moz-transition: background 0.2s ease-in-out;
@@ -107,15 +86,11 @@ Following additional class names are supported:
   /* colors */
   color: hsl(var(--color-hue) var(--color-sat) var(--color-lig)) !important;
 
-  background-color: hsl(
-    var(--bg-color-hue) var(--bg-color-sat) var(--bg-color-lig)
-  );
+  background-color: hsl(var(--bg-color-hue) var(--bg-color-sat) var(--bg-color-lig));
 
-  --box-shadow: inset rgba(255, 254, 255, 0.6) 0 0.3em 0.3em,
-    inset rgba(0, 0, 0, 0.15) 0 -0.1em 0.3em,
+  --box-shadow: inset rgba(255, 254, 255, 0.6) 0 0.3em 0.3em, inset rgba(0, 0, 0, 0.15) 0 -0.1em 0.3em,
     hsl(var(--bs-top-hue) var(--bs-top-sat) var(--bs-top-lig)) 0 0.1em 3px,
-    hsl(var(--bs-bot-hue) var(--bs-bot-sat) var(--bs-bot-lig)) 0 0.3em 1px,
-    rgba(0, 0, 0, 0.2) 0 0.5em 5px;
+    hsl(var(--bs-bot-hue) var(--bs-bot-sat) var(--bs-bot-lig)) 0 0.3em 1px, rgba(0, 0, 0, 0.2) 0 0.5em 5px;
 
   -webkit-box-shadow: var(--box-shadow);
   -moz-box-shadow: var(--box-shadow);
@@ -179,56 +154,71 @@ button[bonbon] {
 
 /* blue */
 [bonbon].blue {
-  color: hsl(208, 50%, 40%) !important;
-  background-color: hsl(208, 100%, 75%);
-  -webkit-box-shadow: inset rgba(255, 254, 255, 0.6) 0 0.3em 0.3em,
-    inset rgba(0, 0, 0, 0.15) 0 -0.1em 0.3em, hsl(208, 50%, 55%) 0 0.1em 3px,
-    hsl(208, 50%, 40%) 0 0.3em 1px, rgba(0, 0, 0, 0.2) 0 0.5em 5px;
-  -moz-box-shadow: inset rgba(255, 254, 255, 0.6) 0 0.3em 0.3em,
-    inset rgba(0, 0, 0, 0.15) 0 -0.1em 0.3em, hsl(208, 50%, 55%) 0 0.1em 3px,
-    hsl(208, 50%, 40%) 0 0.3em 1px, rgba(0, 0, 0, 0.2) 0 0.5em 5px;
-  box-shadow: inset rgba(255, 254, 255, 0.6) 0 0.3em 0.3em,
-    inset rgba(0, 0, 0, 0.15) 0 -0.1em 0.3em, hsl(208, 50%, 55%) 0 0.1em 3px,
-    hsl(208, 50%, 40%) 0 0.3em 1px, rgba(0, 0, 0, 0.2) 0 0.5em 5px;
-  &:hover {
-    background-color: hsl(208, 100%, 83%);
-  }
+  --color-hue: 208deg;
+  --color-sat: 50%;
+  --color-lig: 40%;
+
+  --bg-color-hue: 208deg;
+  --bg-color-sat: 100%;
+  --bg-color-lig: 75%;
+
+  --bs-top-hue: 208deg;
+  --bs-top-sat: 50%;
+  --bs-top-lig: 55%;
+
+  --bs-bot-hue: 208deg;
+  --bs-bot-sat: 50%;
+  --bs-bot-lig: 40%;
+
+  --hover-hue: 208deg;
+  --hover-sat: 100%;
+  --hover-lig: 83%;
 }
 
 /* green */
 [bonbon].green {
-  color: hsl(88, 70%, 30%) !important;
-  background-color: hsl(88, 70%, 60%);
-  -webkit-box-shadow: inset rgba(255, 254, 255, 0.6) 0 0.3em 0.3em,
-    inset rgba(0, 0, 0, 0.15) 0 -0.1em 0.3em, hsl(88, 70%, 40%) 0 0.1em 3px,
-    hsl(88, 70%, 30%) 0 0.3em 1px, rgba(0, 0, 0, 0.2) 0 0.5em 5px;
-  -moz-box-shadow: inset rgba(255, 254, 255, 0.6) 0 0.3em 0.3em,
-    inset rgba(0, 0, 0, 0.15) 0 -0.1em 0.3em, hsl(88, 70%, 40%) 0 0.1em 3px,
-    hsl(88, 70%, 30%) 0 0.3em 1px, rgba(0, 0, 0, 0.2) 0 0.5em 5px;
-  box-shadow: inset rgba(255, 254, 255, 0.6) 0 0.3em 0.3em,
-    inset rgba(0, 0, 0, 0.15) 0 -0.1em 0.3em, hsl(88, 70%, 40%) 0 0.1em 3px,
-    hsl(88, 70%, 30%) 0 0.3em 1px, rgba(0, 0, 0, 0.2) 0 0.5em 5px;
-  &:hover {
-    background-color: hsl(88, 70%, 75%);
-  }
+  --color-hue: 88deg;
+  --color-sat: 70%;
+  --color-lig: 30%;
+
+  --bg-color-hue: 88deg;
+  --bg-color-sat: 70%;
+  --bg-color-lig: 60%;
+
+  --bs-top-hue: 88deg;
+  --bs-top-sat: 70%;
+  --bs-top-lig: 40%;
+
+  --bs-bot-hue: 88deg;
+  --bs-bot-sat: 70%;
+  --bs-bot-lig: 30%;
+
+  --hover-hue: 88deg;
+  --hover-sat: 70%;
+  --hover-lig: 75%;
 }
 
 /* pink */
 [bonbon].pink {
-  color: hsl(340, 100%, 30%) !important;
-  background-color: hsl(340, 100%, 75%);
-  -webkit-box-shadow: inset rgba(255, 254, 255, 0.6) 0 0.3em 0.3em,
-    inset rgba(0, 0, 0, 0.15) 0 -0.1em 0.3em, hsl(340, 70%, 50%) 0 0.1em 3px,
-    hsl(340, 80%, 40%) 0 0.3em 1px, rgba(0, 0, 0, 0.2) 0 0.5em 5px;
-  -moz-box-shadow: inset rgba(255, 254, 255, 0.6) 0 0.3em 0.3em,
-    inset rgba(0, 0, 0, 0.15) 0 -0.1em 0.3em, hsl(340, 70%, 50%) 0 0.1em 3px,
-    hsl(340, 80%, 40%) 0 0.3em 1px, rgba(0, 0, 0, 0.2) 0 0.5em 5px;
-  box-shadow: inset rgba(255, 254, 255, 0.6) 0 0.3em 0.3em,
-    inset rgba(0, 0, 0, 0.15) 0 -0.1em 0.3em, hsl(340, 70%, 50%) 0 0.1em 3px,
-    hsl(340, 80%, 40%) 0 0.3em 1px, rgba(0, 0, 0, 0.2) 0 0.5em 5px;
-  &:hover {
-    background-color: hsl(340, 100%, 83%);
-  }
+  --color-hue: 340deg;
+  --color-sat: 100%;
+  --color-lig: 30%;
+
+  --bg-color-hue: 340deg;
+  --bg-color-sat: 100%;
+  --bg-color-lig: 75%;
+
+  --bs-top-hue: 340deg;
+  --bs-top-sat: 70%;
+  --bs-top-lig: 50%;
+
+  --bs-bot-hue: 340deg;
+  --bs-bot-sat: 80%;
+  --bs-bot-lig: 40%;
+
+  --hover-hue: 340deg;
+  --hover-sat: 100%;
+  --hover-lig: 83%;
 }
 
 [bonbon].transparent {
@@ -248,44 +238,17 @@ button[bonbon] {
 
 /* -------------- States -------------- */
 button[bonbon]:active {
-  background-image: -webkit-gradient(
-    radial,
-    50% 0,
-    100,
-    50% 0,
-    0,
-    from(rgba(255, 255, 255, 0)),
-    to(rgba(255, 255, 255, 0))
-  );
+  background-image: -webkit-gradient(radial, 50% 0, 100, 50% 0, 0, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
 
-  background-image: -moz-gradient(
-    radial,
-    50% 0,
-    100,
-    50% 0,
-    0,
-    from(rgba(255, 255, 255, 0)),
-    to(rgba(255, 255, 255, 0))
-  );
+  background-image: -moz-gradient(radial, 50% 0, 100, 50% 0, 0, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
 
-  background-image: gradient(
-    radial,
-    50% 0,
-    100,
-    50% 0,
-    0,
-    from(rgba(255, 255, 255, 0)),
-    to(rgba(255, 255, 255, 0))
-  );
+  background-image: gradient(radial, 50% 0, 100, 50% 0, 0, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
 
-  -webkit-box-shadow: inset rgba(255, 255, 255, 0.6) 0 0.3em 0.3em,
-    inset rgba(0, 0, 0, 0.2) 0 -0.1em 0.3em, rgba(0, 0, 0, 0.4) 0 0.1em 1px,
+  -webkit-box-shadow: inset rgba(255, 255, 255, 0.6) 0 0.3em 0.3em, inset rgba(0, 0, 0, 0.2) 0 -0.1em 0.3em, rgba(0, 0, 0, 0.4) 0 0.1em 1px,
     /* border */ rgba(0, 0, 0, 0.2) 0 0.2em 6px;
-  -moz-box-shadow: inset rgba(255, 255, 255, 0.6) 0 0.3em 0.3em,
-    inset rgba(0, 0, 0, 0.2) 0 -0.1em 0.3em, rgba(0, 0, 0, 0.4) 0 0.1em 1px,
+  -moz-box-shadow: inset rgba(255, 255, 255, 0.6) 0 0.3em 0.3em, inset rgba(0, 0, 0, 0.2) 0 -0.1em 0.3em, rgba(0, 0, 0, 0.4) 0 0.1em 1px,
     /* border */ rgba(0, 0, 0, 0.2) 0 0.2em 6px;
-  box-shadow: inset rgba(255, 255, 255, 0.6) 0 0.3em 0.3em,
-    inset rgba(0, 0, 0, 0.2) 0 -0.1em 0.3em, rgba(0, 0, 0, 0.4) 0 0.1em 1px,
+  box-shadow: inset rgba(255, 255, 255, 0.6) 0 0.3em 0.3em, inset rgba(0, 0, 0, 0.2) 0 -0.1em 0.3em, rgba(0, 0, 0, 0.4) 0 0.1em 1px,
     /* border */ rgba(0, 0, 0, 0.2) 0 0.2em 6px;
 
   -webkit-transform: translateY(0.2em);
@@ -305,14 +268,11 @@ button[bonbon]:active {
   background-image: none;
   border-top: none;
 
-  -webkit-box-shadow: inset rgba(255, 254, 255, 0.4) 0 0.3em 0.3em,
-    inset rgba(0, 0, 0, 0.1) 0 -0.1em 0.3em, rgba(0, 0, 0, 0.3) 0 0.1em 1px,
+  -webkit-box-shadow: inset rgba(255, 254, 255, 0.4) 0 0.3em 0.3em, inset rgba(0, 0, 0, 0.1) 0 -0.1em 0.3em, rgba(0, 0, 0, 0.3) 0 0.1em 1px,
     /* border */ rgba(0, 0, 0, 0.2) 0 0.2em 6px;
-  -moz-box-shadow: inset rgba(255, 254, 255, 0.4) 0 0.3em 0.3em,
-    inset rgba(0, 0, 0, 0.1) 0 -0.1em 0.3em, rgba(0, 0, 0, 0.3) 0 0.1em 1px,
+  -moz-box-shadow: inset rgba(255, 254, 255, 0.4) 0 0.3em 0.3em, inset rgba(0, 0, 0, 0.1) 0 -0.1em 0.3em, rgba(0, 0, 0, 0.3) 0 0.1em 1px,
     /* border */ rgba(0, 0, 0, 0.2) 0 0.2em 6px;
-  box-shadow: inset rgba(255, 254, 255, 0.4) 0 0.3em 0.3em,
-    inset rgba(0, 0, 0, 0.1) 0 -0.1em 0.3em, rgba(0, 0, 0, 0.3) 0 0.1em 1px,
+  box-shadow: inset rgba(255, 254, 255, 0.4) 0 0.3em 0.3em, inset rgba(0, 0, 0, 0.1) 0 -0.1em 0.3em, rgba(0, 0, 0, 0.3) 0 0.1em 1px,
     /* border */ rgba(0, 0, 0, 0.2) 0 0.2em 6px;
 
   -webkit-transform: translateY(5px);
@@ -322,7 +282,7 @@ button[bonbon]:active {
 
 /* -------------- Fonts -------------- */
 .serif {
-  font-family: "Lobster", serif;
+  font-family: 'Lobster', serif;
   font-weight: normal;
 }
 
@@ -337,7 +297,7 @@ button[bonbon]:active {
 /* -------------- Materials -------------- */
 [bonbon].glossy:after,
 [bonbon].glass:after {
-  content: "";
+  content: '';
   position: absolute;
   width: 90%;
   height: 60%;
@@ -391,21 +351,19 @@ button[bonbon]:active {
 
 /* -------------- Glass + Transparent -------------- */
 [bonbon].glass {
-  text-shadow: rgba(255, 255, 255, 0.5) 0 -1px 0,
-    rgba(0, 0, 0, 0.18) 0 0.18em 0.15em;
+  text-shadow: rgba(255, 255, 255, 0.5) 0 -1px 0, rgba(0, 0, 0, 0.18) 0 0.18em 0.15em;
 }
 
 [bonbon].glass:active {
-  text-shadow: rgba(255, 255, 255, 0.3) 0 1px 0,
-    rgba(0, 0, 0, 0.15) 0 0.18em 0.15em;
+  text-shadow: rgba(255, 255, 255, 0.3) 0 1px 0, rgba(0, 0, 0, 0.15) 0 0.18em 0.15em;
 }
 
 /* -------------- Shapes -------------- */
 
 /* round */
-.round,
-.round.glossy:after,
-.round.glass:after {
+[bonbon].round,
+[bonbon].round.glossy:after,
+[bonbon].round.glass:after {
   border-top: none;
   -webkit-border-radius: 1em;
   -moz-border-radius: 1em;
@@ -413,7 +371,7 @@ button[bonbon]:active {
 }
 
 /* oval */
-.oval {
+[bonbon].oval {
   border-top: none;
   padding-left: 0.8em;
   padding-right: 0.8em;
@@ -421,31 +379,31 @@ button[bonbon]:active {
   -moz-border-radius: 5em / 2em;
   border-radius: 5em / 2em;
 }
-.oval.glossy:after,
-.oval.glass:after {
+[bonbon].oval.glossy:after,
+[bonbon].oval.glass:after {
   top: 5%;
   -webkit-border-radius: 5em / 2em 2em 1em 1em;
   -moz-border-radius: 5em / 2em 2em 1em 1em;
   border-radius: 5em / 2em 2em 1em 1em;
 }
-.oval.icon {
+[bonbon].oval.icon {
   padding-left: 0.8em;
   padding-right: 0.8em;
   -webkit-border-radius: 1.5em / 1em;
   -moz-border-radius: 1.5em / 1em;
   border-radius: 1.5em / 1em;
 }
-.oval.icon.glossy:after,
-.oval.icon.glass:after {
+[bonbon].oval.icon.glossy:after,
+[bonbon].oval.icon.glass:after {
   -webkit-border-radius: 1.5em / 1em;
   -moz-border-radius: 1.5em / 1em;
   border-radius: 1.5em / 1em;
 }
 
 /* brackets */
-.brackets,
-.brackets.glossy:after,
-.brackets.glass:after {
+[bonbon].brackets,
+[bonbon].brackets.glossy:after,
+[bonbon].brackets.glass:after {
   border-top: none;
   -webkit-border-radius: 0.5em / 1em;
   -moz-border-radius: 0.5em / 1em;
@@ -453,7 +411,7 @@ button[bonbon]:active {
 }
 
 /* skew */
-.skew {
+[bonbon].skew {
   border-top: none;
   padding-right: 1.2em;
   padding-left: 0.8em;
@@ -461,50 +419,50 @@ button[bonbon]:active {
   -moz-border-radius: 5em 1em / 5em 1em;
   border-radius: 5em 1em / 5em 1em;
 }
-.skew.glossy:after,
-.skew.glass:after {
+[bonbon].skew.glossy:after,
+[bonbon].skew.glass:after {
   left: 10%;
   -webkit-border-radius: 7em 1em / 5em 1em;
   -moz-border-radius: 7em 1em / 5em 1em;
   border-radius: 7em 1em / 5em 1em;
 }
-.skew.icon {
+[bonbon].skew.icon {
   padding-right: 0.9em;
   padding-left: 0.8em;
 }
 
 /* back */
-.back,
-.back.glossy:after,
-.back.glass:after {
+[bonbon].back,
+[bonbon].back.glossy:after,
+[bonbon].back.glass:after {
   border-top-color: rgba(255, 255, 255, 0.5);
   -webkit-border-radius: 1.6em 1.6em 1em 1em / 4em 4em 1em 1em;
   -moz-border-radius: 1.6em 1.6em 1em 1em / 4em 4em 1em 1em;
   border-radius: 1.6em 1.6em 1em 1em / 4em 4em 1em 1em;
 }
-.back.glossy:after,
-.back.glass:after {
+[bonbon].back.glossy:after,
+[bonbon].back.glass:after {
   left: 6%;
   width: 88%;
 }
 
 /* knife */
-.knife {
+[bonbon].knife {
   padding-left: 1.5em;
   -webkit-border-radius: 0.2em 0.5em 0.5em 8em / 0.2em 0.5em 0.5em 5em;
   -moz-border-radius: 0.2em 0.5em 0.5em 8em / 0.2em 0.5em 0.5em 5em;
   border-radius: 0.2em 0.5em 0.5em 8em / 0.2em 0.5em 0.5em 5em;
 }
-.knife.glossy:after,
-.knife.glass:after {
+[bonbon].knife.glossy:after,
+[bonbon].knife.glass:after {
   left: 3%;
   width: 97%;
   -webkit-border-radius: 0.1em 0.5em 0.5em 8em / 0.1em 0.5em 0.5em 2em;
   -moz-border-radius: 0.1em 0.5em 0.5em 8em / 0.1em 0.5em 0.5em 2em;
   border-radius: 0.1em 0.5em 0.5em 8em / 0.1em 0.5em 0.5em 2em;
 }
-.knife.glossy.icon:after,
-.knife.glass.icon:after {
+[bonbon].knife.glossy.icon:after,
+[bonbon].knife.glass.icon:after {
   left: 5%;
   width: 95%;
   -webkit-border-radius: 0.5em 0.5em 1em 6em / 0.5em 0.5em 1em 4em;
@@ -513,42 +471,42 @@ button[bonbon]:active {
 }
 
 /* shield */
-.shield,
-.shield.glossy:after,
-.shield.glass:after {
+[bonbon].shield,
+[bonbon].shield.glossy:after,
+[bonbon].shield.glass:after {
   -webkit-border-radius: 0.4em 0.4em 2em 2em / 0.4em 0.4em 3em 3em;
   -moz-border-radius: 0.4em 0.4em 2em 2em / 0.4em 0.4em 3em 3em;
   border-radius: 0.4em 0.4em 2em 2em / 0.4em 0.4em 3em 3em;
 }
-.shield {
+[bonbon].shield {
   padding-left: 0.8em;
   padding-right: 0.8em;
 }
-.shield.icon {
+[bonbon].shield.icon {
   padding-left: 0.6em;
   padding-right: 0.6em;
 }
 
 /* drop */
-.drop {
+[bonbon].drop {
   border-top: none;
   -webkit-border-radius: 2em 5em 2em 0.6em / 2em 4em 2em 0.6em;
   -moz-border-radius: 2em 5em 2em 0.6em / 2em 4em 2em 0.6em;
   border-radius: 2em 5em 2em 0.6em / 2em 4em 2em 0.6em;
 }
-.drop.glossy:after,
-.drop.glass:after {
+[bonbon].drop.glossy:after,
+[bonbon].drop.glass:after {
   left: 4%;
   -webkit-border-radius: 2em 6em 2em 1em / 2em 4em 2em 2em;
   -moz-border-radius: 2em 6em 2em 1em / 2em 4em 2em 2em;
   border-radius: 2em 6em 2em 1em / 2em 4em 2em 2em;
 }
-.drop.icon {
+[bonbon].drop.icon {
   padding-right: 0.6em;
 }
 
 /* morph */
-.morph {
+[bonbon].morph {
   border-top: none;
   -webkit-border-radius: 5em / 2em;
   -moz-border-radius: 5em / 2em;
@@ -557,16 +515,16 @@ button[bonbon]:active {
   -moz-transition: -moz-border-radius 0.3s ease-in-out;
   transition: -moz-border-radius 0.3s ease-in-out;
 }
-.morph:hover {
+[bonbon].morph:hover {
   -webkit-border-radius: 0.4em 0.4em 2em 2em / 0.4em 0.4em 3em 3em;
   -moz-border-radius: 0.4em 0.4em 2em 2em / 0.4em 0.4em 3em 3em;
   border-radius: 0.4em 0.4em 2em 2em / 0.4em 0.4em 3em 3em;
 }
-.morph:active {
+[bonbon].morph:active {
   -webkit-border-radius: 0.3em;
   -moz-border-radius: 0.3em;
   border-radius: 0.3em;
 }
-.morph:after {
+[bonbon].morph:after {
   display: none;
 }

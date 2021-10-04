@@ -1,58 +1,29 @@
-import { Injectable } from '@angular/core';
+import { Inject, Injectable, InjectionToken } from '@angular/core';
 import { Resolve } from '@angular/router';
+import { PlayerService } from 'src/app/services/player.service';
+import { Figure } from 'src/models/figure';
 
-import { Animal } from '../../models/animal';
+const urls: readonly string[] = Object.freeze(['animals', 'family']);
+
+export const FIGURES = new InjectionToken<Promise<any>>('figures list', {
+  factory: () => Promise.all(urls.map((url) => fetch(`assets/data/${url}.json`).then((resp) => ({ [url]: resp.json() })))),
+});
 
 @Injectable({ providedIn: 'root' })
-export class AnimalsService implements Resolve<Promise<Animal[]>> {
-  private animals: Animal[] = [];
+export class AnimalsService implements Resolve<Figure[]> {
+  animals: Figure[] = [];
+
+  constructor(@Inject(FIGURES) private figures: Promise<Figure[]>, private player: PlayerService) {}
 
   async resolve() {
-    if (!this.animals.length) {
-      const req = await fetch('assets/animals/animals.json');
-      this.animals = await req.json();
+    this.animals = await this.figures;
 
-      this.animals.forEach(
-        (animal) => (new Image().src = 'assets/animals/' + animal.name + '.svg')
-      );
-    }
+    // preload img & sound
+    this.animals.forEach((animal) => {
+      this.player.preload(animal.sound);
+      new Image().src = animal.fileName;
+    });
 
-    this.animals;
     return this.animals;
   }
-
-  getRandom = (n: number): Animal[] =>
-    this.animals.sort(() => 0.5 - Math.random()).slice(0, n);
-
-  getRandomPairs = (n: number): Animal[] => {
-    const rand = this.getRandom(n);
-    return [...rand, ...rand].sort(() => 0.5 - Math.random());
-  };
-
-  getMultipleChoiseElements = (n = 5): MultipleChoiceElements[] => {
-    const elements: MultipleChoiceElements[] = [];
-
-    const randBetween = (min: number, max: number) =>
-      Math.floor(Math.random() * (max - min + 1) + min);
-
-    const generateElements = () => {
-      const options = this.getRandom(4);
-      const answer = options[randBetween(0, 3)];
-      return { answer, options };
-    };
-
-    while (elements.length < n) {
-      const next = generateElements();
-      if (!elements.find((e) => e.answer.id === next.answer.id)) {
-        elements.push(next);
-      }
-    }
-
-    return elements;
-  };
-}
-
-export interface MultipleChoiceElements {
-  answer: Animal;
-  options: Animal[];
 }

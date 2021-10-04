@@ -1,0 +1,602 @@
+[
+  {
+    "fileName": "assets/animals/ant.svg",
+    "sound": "assets/audio/ant.mp3",
+    "name": "ant",
+    "pt": "formiga"
+  },
+  {
+    "fileName": "assets/animals/anteater.svg",
+    "sound": "assets/audio/anteater.mp3",
+    "name": "anteater",
+    "pt": "tamanduá"
+  },
+  {
+    "fileName": "assets/animals/arctic-fox.svg",
+    "sound": "assets/audio/arctic-fox.mp3",
+    "name": "arctic fox",
+    "pt": "raposa do ártico"
+  },
+  {
+    "fileName": "assets/animals/bear.svg",
+    "sound": "assets/audio/bear.mp3",
+    "name": "bear",
+    "pt": "urso"
+  },
+  {
+    "fileName": "assets/animals/bee.svg",
+    "sound": "assets/audio/bee.mp3",
+    "name": "bee",
+    "pt": "abelha"
+  },
+  {
+    "fileName": "assets/animals/beetle.svg",
+    "sound": "assets/audio/beetle.mp3",
+    "name": "beetle",
+    "pt": "besouro"
+  },
+  {
+    "fileName": "assets/animals/bison.svg",
+    "sound": "assets/audio/bison.mp3",
+    "name": "bison",
+    "pt": "búfalo"
+  },
+  {
+    "fileName": "assets/animals/black-panther.svg",
+    "sound": "assets/audio/black-panther.mp3",
+    "name": "black panther",
+    "pt": "pantera negra"
+  },
+  {
+    "fileName": "assets/animals/blue-tang-fish.svg",
+    "sound": "assets/audio/blue-tang-fish.mp3",
+    "name": "blue tang fish",
+    "pt": "peixe espiga azul"
+  },
+  {
+    "fileName": "assets/animals/camel.svg",
+    "sound": "assets/audio/camel.mp3",
+    "name": "camel",
+    "pt": "camelo"
+  },
+  {
+    "fileName": "assets/animals/cat.svg",
+    "sound": "assets/audio/cat.mp3",
+    "name": "cat",
+    "pt": "gato"
+  },
+  {
+    "fileName": "assets/animals/chameleon.svg",
+    "sound": "assets/audio/chameleon.mp3",
+    "name": "chameleon",
+    "pt": "camaleão"
+  },
+  {
+    "fileName": "assets/animals/cheetah.svg",
+    "sound": "assets/audio/cheetah.mp3",
+    "name": "cheetah",
+    "pt": "leopardo"
+  },
+  {
+    "fileName": "assets/animals/chicken.svg",
+    "sound": "assets/audio/chicken.mp3",
+    "name": "chicken",
+    "pt": "galinha"
+  },
+  {
+    "fileName": "assets/animals/clown-fish.svg",
+    "sound": "assets/audio/clown-fish.mp3",
+    "name": "clown fish",
+    "pt": "peixe-palhaço"
+  },
+  {
+    "fileName": "assets/animals/cougar.svg",
+    "sound": "assets/audio/cougar.mp3",
+    "name": "cougar",
+    "pt": "puma"
+  },
+  {
+    "fileName": "assets/animals/cow.svg",
+    "sound": "assets/audio/cow.mp3",
+    "name": "cow",
+    "pt": "vaca"
+  },
+  {
+    "fileName": "assets/animals/crab.svg",
+    "sound": "assets/audio/crab.mp3",
+    "name": "crab",
+    "pt": "caranguejo"
+  },
+  {
+    "fileName": "assets/animals/crocodile.svg",
+    "sound": "assets/audio/crocodile.mp3",
+    "name": "crocodile",
+    "pt": "crocodilo"
+  },
+  {
+    "fileName": "assets/animals/deer.svg",
+    "sound": "assets/audio/deer.mp3",
+    "name": "deer",
+    "pt": "cervo"
+  },
+  {
+    "fileName": "assets/animals/dog.svg",
+    "sound": "assets/audio/dog.mp3",
+    "name": "dog",
+    "pt": "cão"
+  },
+  {
+    "fileName": "assets/animals/dolphin.svg",
+    "sound": "assets/audio/dolphin.mp3",
+    "name": "dolphin",
+    "pt": "golfinho"
+  },
+  {
+    "fileName": "assets/animals/duck.svg",
+    "sound": "assets/audio/duck.mp3",
+    "name": "duck",
+    "pt": "pato"
+  },
+  {
+    "fileName": "assets/animals/eagle.svg",
+    "sound": "assets/audio/eagle.mp3",
+    "name": "eagle",
+    "pt": "águia"
+  },
+  {
+    "fileName": "assets/animals/elephant.svg",
+    "sound": "assets/audio/elephant.mp3",
+    "name": "elephant",
+    "pt": "elefante"
+  },
+  {
+    "fileName": "assets/animals/emu.svg",
+    "sound": "assets/audio/emu.mp3",
+    "name": "emu",
+    "pt": "emu"
+  },
+  {
+    "fileName": "assets/animals/flamingo.svg",
+    "sound": "assets/audio/flamingo.mp3",
+    "name": "flamingo",
+    "pt": "flamingo"
+  },
+  {
+    "fileName": "assets/animals/fox.svg",
+    "sound": "assets/audio/fox.mp3",
+    "name": "fox",
+    "pt": "raposa"
+  },
+  {
+    "fileName": "assets/animals/frog.svg",
+    "sound": "assets/audio/frog.mp3",
+    "name": "frog",
+    "pt": "rã"
+  },
+  {
+    "fileName": "assets/animals/panda.svg",
+    "sound": "assets/audio/panda.mp3",
+    "name": "panda",
+    "pt": "panda"
+  },
+  {
+    "fileName": "assets/animals/giraffe.svg",
+    "sound": "assets/audio/giraffe.mp3",
+    "name": "giraffe",
+    "pt": "girafa"
+  },
+  {
+    "fileName": "assets/animals/goat.svg",
+    "sound": "assets/audio/goat.mp3",
+    "name": "goat",
+    "pt": "cabra"
+  },
+  {
+    "fileName": "assets/animals/gorilla.svg",
+    "sound": "assets/audio/gorilla.mp3",
+    "name": "gorilla",
+    "pt": "gorila"
+  },
+  {
+    "fileName": "assets/animals/guinea-pig.svg",
+    "sound": "assets/audio/guinea-pig.mp3",
+    "name": "guinea pig",
+    "pt": "porquinho da índia"
+  },
+  {
+    "fileName": "assets/animals/hamster.svg",
+    "sound": "assets/audio/hamster.mp3",
+    "name": "hamster",
+    "pt": "hamster"
+  },
+  {
+    "fileName": "assets/animals/hedgehog.svg",
+    "sound": "assets/audio/hedgehog.mp3",
+    "name": "hedgehog",
+    "pt": "ouriço"
+  },
+  {
+    "fileName": "assets/animals/hippopotamus.svg",
+    "sound": "assets/audio/hippopotamus.mp3",
+    "name": "hippopotamus",
+    "pt": "hipopótamo"
+  },
+  {
+    "fileName": "assets/animals/horse.svg",
+    "sound": "assets/audio/horse.mp3",
+    "name": "horse",
+    "pt": "cavalo"
+  },
+  {
+    "fileName": "assets/animals/hummingbird.svg",
+    "sound": "assets/audio/hummingbird.mp3",
+    "name": "hummingbird",
+    "pt": "beija flor"
+  },
+  {
+    "fileName": "assets/animals/jaguar.svg",
+    "sound": "assets/audio/jaguar.mp3",
+    "name": "jaguar",
+    "pt": "jaguar"
+  },
+  {
+    "fileName": "assets/animals/jellyfish.svg",
+    "sound": "assets/audio/jellyfish.mp3",
+    "name": "jellyfish",
+    "pt": "medusa"
+  },
+  {
+    "fileName": "assets/animals/kangaroo.svg",
+    "sound": "assets/audio/kangaroo.mp3",
+    "name": "kangaroo",
+    "pt": "canguru"
+  },
+  {
+    "fileName": "assets/animals/orca.svg",
+    "sound": "assets/audio/orca.mp3",
+    "name": "orca",
+    "pt": "orca"
+  },
+  {
+    "fileName": "assets/animals/kiwi.svg",
+    "sound": "assets/audio/kiwi.mp3",
+    "name": "kiwi",
+    "pt": "kiwi"
+  },
+  {
+    "fileName": "assets/animals/koala.svg",
+    "sound": "assets/audio/koala.mp3",
+    "name": "koala",
+    "pt": "coala"
+  },
+  {
+    "fileName": "assets/animals/ladybug.svg",
+    "sound": "assets/audio/ladybug.mp3",
+    "name": "ladybug",
+    "pt": "joaninha"
+  },
+  {
+    "fileName": "assets/animals/lemur.svg",
+    "sound": "assets/audio/lemur.mp3",
+    "name": "lemur",
+    "pt": "lêmure"
+  },
+  {
+    "fileName": "assets/animals/leopard.svg",
+    "sound": "assets/audio/leopard.mp3",
+    "name": "leopard",
+    "pt": "leopardo"
+  },
+  {
+    "fileName": "assets/animals/lion.svg",
+    "sound": "assets/audio/lion.mp3",
+    "name": "lion",
+    "pt": "leão"
+  },
+  {
+    "fileName": "assets/animals/llama.svg",
+    "sound": "assets/audio/llama.mp3",
+    "name": "llama",
+    "pt": "lama"
+  },
+  {
+    "fileName": "assets/animals/lobster.svg",
+    "sound": "assets/audio/lobster.mp3",
+    "name": "lobster",
+    "pt": "lagosta"
+  },
+  {
+    "fileName": "assets/animals/monkey.svg",
+    "sound": "assets/audio/monkey.mp3",
+    "name": "monkey",
+    "pt": "macaco"
+  },
+  {
+    "fileName": "assets/animals/mouse.svg",
+    "sound": "assets/audio/mouse.mp3",
+    "name": "mouse",
+    "pt": "rato"
+  },
+  {
+    "fileName": "assets/animals/octopus.svg",
+    "sound": "assets/audio/octopus.mp3",
+    "name": "octopus",
+    "pt": "polvo"
+  },
+  {
+    "fileName": "assets/animals/orangutan.svg",
+    "sound": "assets/audio/orangutan.mp3",
+    "name": "orangutan",
+    "pt": "orangotango"
+  },
+  {
+    "fileName": "assets/animals/ostrich.svg",
+    "sound": "assets/audio/ostrich.mp3",
+    "name": "ostrich",
+    "pt": "avestruz"
+  },
+  {
+    "fileName": "assets/animals/otter.svg",
+    "sound": "assets/audio/otter.mp3",
+    "name": "otter",
+    "pt": "lontra"
+  },
+  {
+    "fileName": "assets/animals/owl.svg",
+    "sound": "assets/audio/owl.mp3",
+    "name": "owl",
+    "pt": "coruja"
+  },
+  {
+    "fileName": "assets/animals/peacock.svg",
+    "sound": "assets/audio/peacock.mp3",
+    "name": "peacock",
+    "pt": "pavão"
+  },
+  {
+    "fileName": "assets/animals/penguin.svg",
+    "sound": "assets/audio/penguin.mp3",
+    "name": "penguin",
+    "pt": "pinguim"
+  },
+  {
+    "fileName": "assets/animals/pig.svg",
+    "sound": "assets/audio/pig.mp3",
+    "name": "pig",
+    "pt": "porco"
+  },
+  {
+    "fileName": "assets/animals/pigeon.svg",
+    "sound": "assets/audio/pigeon.mp3",
+    "name": "pigeon",
+    "pt": "pombo"
+  },
+  {
+    "fileName": "assets/animals/platypus.svg",
+    "sound": "assets/audio/platypus.mp3",
+    "name": "platypus",
+    "pt": "ornitorrinco"
+  },
+  {
+    "fileName": "assets/animals/polar.svg",
+    "sound": "assets/audio/polar.mp3",
+    "name": "polar bear",
+    "pt": "urso polar"
+  },
+  {
+    "fileName": "assets/animals/porcupine.svg",
+    "sound": "assets/audio/porcupine.mp3",
+    "name": "porcupine",
+    "pt": "porco-espinho"
+  },
+  {
+    "fileName": "assets/animals/prawn.svg",
+    "sound": "assets/audio/prawn.mp3",
+    "name": "prawn",
+    "pt": "camarão"
+  },
+  {
+    "fileName": "assets/animals/praying-mantis.svg",
+    "sound": "assets/audio/praying-mantis.mp3",
+    "name": "praying mantis",
+    "pt": "louva-deus"
+  },
+  {
+    "fileName": "assets/animals/puffer-fish.svg",
+    "sound": "assets/audio/puffer-fish.mp3",
+    "name": "puffer fish",
+    "pt": "baiacu"
+  },
+  {
+    "fileName": "assets/animals/rabbit.svg",
+    "sound": "assets/audio/rabbit.mp3",
+    "name": "rabbit",
+    "pt": "coelho"
+  },
+  {
+    "fileName": "assets/animals/raccoon.svg",
+    "sound": "assets/audio/raccoon.mp3",
+    "name": "raccoon",
+    "pt": "guaxinim"
+  },
+  {
+    "fileName": "assets/animals/rat.svg",
+    "sound": "assets/audio/rat.mp3",
+    "name": "rat",
+    "pt": "rato"
+  },
+  {
+    "fileName": "assets/animals/red-panda.svg",
+    "sound": "assets/audio/red-panda.mp3",
+    "name": "red panda",
+    "pt": "panda vermelho"
+  },
+  {
+    "fileName": "assets/animals/reindeer.svg",
+    "sound": "assets/audio/reindeer.mp3",
+    "name": "reindeer",
+    "pt": "rena"
+  },
+  {
+    "fileName": "assets/animals/rhinoceros.svg",
+    "sound": "assets/audio/rhinoceros.mp3",
+    "name": "rhinoceros",
+    "pt": "rinoceronte"
+  },
+  {
+    "fileName": "assets/animals/salmon.svg",
+    "sound": "assets/audio/salmon.mp3",
+    "name": "salmon",
+    "pt": "salmão"
+  },
+  {
+    "fileName": "assets/animals/scorpion.svg",
+    "sound": "assets/audio/scorpion.mp3",
+    "name": "scorpion",
+    "pt": "escorpião"
+  },
+  {
+    "fileName": "assets/animals/seahorse.svg",
+    "sound": "assets/audio/seahorse.mp3",
+    "name": "seahorse",
+    "pt": "cavalo marinho"
+  },
+  {
+    "fileName": "assets/animals/seal.svg",
+    "sound": "assets/audio/seal.mp3",
+    "name": "seal",
+    "pt": "foca"
+  },
+  {
+    "fileName": "assets/animals/shark.svg",
+    "sound": "assets/audio/shark.mp3",
+    "name": "shark",
+    "pt": "tubarão"
+  },
+  {
+    "fileName": "assets/animals/sheep.svg",
+    "sound": "assets/audio/sheep.mp3",
+    "name": "sheep",
+    "pt": "ovelha"
+  },
+  {
+    "fileName": "assets/animals/skunk.svg",
+    "sound": "assets/audio/skunk.mp3",
+    "name": "skunk",
+    "pt": "doninha fedorenta"
+  },
+  {
+    "fileName": "assets/animals/sloth.svg",
+    "sound": "assets/audio/sloth.mp3",
+    "name": "sloth",
+    "pt": "preguiça"
+  },
+  {
+    "fileName": "assets/animals/snail.svg",
+    "sound": "assets/audio/snail.mp3",
+    "name": "snail",
+    "pt": "lesma"
+  },
+  {
+    "fileName": "assets/animals/snake.svg",
+    "sound": "assets/audio/snake.mp3",
+    "name": "snake",
+    "pt": "cobra"
+  },
+  {
+    "fileName": "assets/animals/spider.svg",
+    "sound": "assets/audio/spider.mp3",
+    "name": "spider",
+    "pt": "aranha"
+  },
+  {
+    "fileName": "assets/animals/squirrel.svg",
+    "sound": "assets/audio/squirrel.mp3",
+    "name": "squirrel",
+    "pt": "esquilo"
+  },
+  {
+    "fileName": "assets/animals/starfish.svg",
+    "sound": "assets/audio/starfish.mp3",
+    "name": "starfish",
+    "pt": "estrela do mar"
+  },
+  {
+    "fileName": "assets/animals/manta-ray.svg",
+    "sound": "assets/audio/manta-ray.mp3",
+    "name": "manta ray",
+    "pt": "arraia"
+  },
+  {
+    "fileName": "assets/animals/sugar-glider.svg",
+    "sound": "assets/audio/sugar-glider.mp3",
+    "name": "sugar glider",
+    "pt": "planador de açúcar"
+  },
+  {
+    "fileName": "assets/animals/swan.svg",
+    "sound": "assets/audio/swan.mp3",
+    "name": "swan",
+    "pt": "cisne"
+  },
+  {
+    "fileName": "assets/animals/tiger.svg",
+    "sound": "assets/audio/tiger.mp3",
+    "name": "tiger",
+    "pt": "tigre"
+  },
+  {
+    "fileName": "assets/animals/tortoise.svg",
+    "sound": "assets/audio/tortoise.mp3",
+    "name": "tortoise",
+    "pt": "tartaruga"
+  },
+  {
+    "fileName": "assets/animals/toucan.svg",
+    "sound": "assets/audio/toucan.mp3",
+    "name": "toucan",
+    "pt": "tucano"
+  },
+  {
+    "fileName": "assets/animals/turkey.svg",
+    "sound": "assets/audio/turkey.mp3",
+    "name": "turkey",
+    "pt": "peru"
+  },
+  {
+    "fileName": "assets/animals/turtle.svg",
+    "sound": "assets/audio/turtle.mp3",
+    "name": "turtle",
+    "pt": "tartaruga"
+  },
+  {
+    "fileName": "assets/animals/walrus.svg",
+    "sound": "assets/audio/walrus.mp3",
+    "name": "walrus",
+    "pt": "morsa"
+  },
+  {
+    "fileName": "assets/animals/whale.svg",
+    "sound": "assets/audio/whale.mp3",
+    "name": "whale",
+    "pt": "baleia"
+  },
+  {
+    "fileName": "assets/animals/wolf.svg",
+    "sound": "assets/audio/wolf.mp3",
+    "name": "wolf",
+    "pt": "lobo"
+  },
+  {
+    "fileName": "assets/animals/yak.svg",
+    "sound": "assets/audio/yak.mp3",
+    "name": "yak",
+    "pt": "iaque"
+  },
+  {
+    "fileName": "assets/animals/zebra.svg",
+    "sound": "assets/audio/zebra.mp3",
+    "name": "zebra",
+    "pt": "zebra"
+  }
+]

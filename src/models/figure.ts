@@ -1,6 +1,6 @@
 export interface Figure {
-  id: string;
+  fileName: string;
   name: string;
-  src: string;
-  soundSrc: string;
+  sound: string;
+  pt: string;
 }

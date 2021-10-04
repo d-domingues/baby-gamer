@@ -8,24 +8,12 @@
         "project": ["tsconfig.json", "e2e/tsconfig.json"],
         "createDefaultProgram": true
       },
-      "extends": [
-        "plugin:@angular-eslint/recommended",
-        "plugin:@angular-eslint/template/process-inline-templates"
-      ],
+      "extends": ["plugin:@angular-eslint/recommended", "plugin:@angular-eslint/template/process-inline-templates"],
       "rules": {
-        "@angular-eslint/component-selector": [
-          "error",
-          { "prefix": "bbg", "style": "kebab-case", "type": "element" }
-        ],
-        "@angular-eslint/directive-selector": [
-          "error",
-          { "prefix": "bbg", "style": "camelCase", "type": "attribute" }
-        ],
-        "@angular-eslint/component-class-suffix": [
-          "error",
-          { "suffixes": ["Page", "Component"] }
-        ]
-        //     "@angular-eslint/use-lifecycle-interface": false
+        "@angular-eslint/component-selector": ["error", { "prefix": "bbg", "style": "kebab-case", "type": "element" }],
+        "@angular-eslint/directive-selector": ["error", { "prefix": "bbg", "style": "camelCase", "type": "attribute" }],
+        "@angular-eslint/component-class-suffix": ["error", { "suffixes": ["Page", "Component"] }],
+        "@angular-eslint/use-lifecycle-interface": ["ignore"]
       }
     },
     {

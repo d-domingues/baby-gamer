@@ -1,14 +1,34 @@
 import { Component } from '@angular/core';
-import { AnimalsService } from 'src/app/services/animals.service';
-import { Animal } from 'src/models/animal';
+import { Figure } from 'src/models/figure';
+
+import { AnimalsService } from './../../services/animals.service';
+import { BasePage } from './../base-page';
 
 @Component({
   selector: 'bbg-collection',
-  styleUrls: ['./collection.page.scss'],
-  template: `
-    <bbg-header></bbg-header>
+  styles: [
+    `
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 6px;
+        margin: 6px;
+      }
 
-    <ion-content>
+      .animal-name {
+        font-size: 14px;
+        text-align: center;
+        margin-top: -5px;
+        margin-bottom: 5px;
+        text-transform: capitalize;
+        line-height: 12px;
+      }
+    `,
+  ],
+  template: `
+    <bbg-header> Coleção </bbg-header>
+
+    <ion-content scrollY="true">
       <div class="grid">
         <bbg-figure bonbon *ngFor="let animal of animals" [figure]="animal">
           <div class="animal-name">{{ animal.pt }}</div>
@@ -17,10 +37,10 @@ import { Animal } from 'src/models/animal';
     </ion-content>
   `,
 })
-export class CollectionPage {
-  animals: Animal[] = [];
+export class CollectionPage extends BasePage {
+  animals: Figure[] = this.figService.animals;
 
-  constructor(public animalService: AnimalsService) {
-    animalService.resolve().then((animals) => (this.animals = animals));
+  constructor(public figService: AnimalsService) {
+    super();
   }
 }

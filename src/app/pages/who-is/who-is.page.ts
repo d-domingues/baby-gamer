@@ -1,20 +1,20 @@
 import { Component } from '@angular/core';
 import { ToastController } from '@ionic/angular';
-import { Animal } from 'src/models/animal';
+import { Figure } from 'src/models/figure';
 
-import { AnimalsService } from './../../services/animals.service';
+import { FiguresService } from '../../services/figures.service';
 
 @Component({
   templateUrl: 'who-is.page.html',
   styleUrls: ['who-is.page.scss'],
 })
 export class WhoIsPage {
-  figures: Animal[];
+  figures: Figure[];
   currentIdx: number;
-  options: Animal[];
+  options: Figure[];
 
   constructor(
-    private figService: AnimalsService,
+    private figService: FiguresService,
     // private player: PlayerService,
     private toastController: ToastController
   ) {
@@ -25,8 +25,8 @@ export class WhoIsPage {
     // todo: add , height=device-height to viewport at indext.html (test)
   }
 
-  select(opt: Animal) {
-    if (this.figures[this.currentIdx].id === opt.id) {
+  select(opt: Figure) {
+    if (this.figures[this.currentIdx].fileName === opt.fileName) {
       console.log('correct');
       // this.player.playByName('correct_answer.mp3', this.next.bind(this));
       this.presentToast();

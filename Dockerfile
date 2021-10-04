@@ -29,5 +29,5 @@ RUN rm -rf /usr/share/nginx/html/*
 COPY --from=node /app/www/ /usr/share/nginx/html/
 
 ## To build the docker image
-# docker build . -t baby-gamer:1.0.0
-# docker run -d -p 8080:80 baby-gamer:1.0.0
+# docker build . -t ddominguescontainer/baby-gamer:1.0.0
+# docker run -d -p 8080:80 ddominguescontainer/baby-gamer:1.0.0

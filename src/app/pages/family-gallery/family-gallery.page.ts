@@ -1,39 +1,37 @@
 import { Component } from '@angular/core';
 import { NativeAudio } from '@ionic-native/native-audio/ngx';
 import { SpeechRecognition, SpeechRecognitionListeningOptions } from '@ionic-native/speech-recognition/ngx';
-import { AudioService } from 'src/app/services/audio.service';
-import { FigureService } from 'src/app/services/figure.service';
+import { FiguresService } from 'src/app/services/figures.service';
 import { Figure } from 'src/models/figure';
 
 @Component({
   selector: 'bbg-family-gallery',
-  styleUrls: ['./family-gallery.page.scss'],
+  styles: [
+    `
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 0.8em;
+        margin: 0.5em;
+      }
+    `,
+  ],
   template: `
-    <bbg-header></bbg-header>
+    <bbg-header> Galeria de Familia </bbg-header>
 
     <ion-content>
       <div class="gallery-grid">
-        <img
-          bonbon="btn"
-          *ngFor="let fig of figures"
-          [src]="fig.src"
-          (click)="onPlay(fig.id)"
-        />
+        <bbg-figure bonbon="btn" *ngFor="let fig of figures" [figure]="fig" (click)="onPlay(fig.sound)"></bbg-figure>
       </div>
     </ion-content>
   `,
 })
 export class FamilyGalleryPage {
-  figures: Figure[] = this.figService.figures;
+  figures: Figure[] = this.figService.family;
   options: SpeechRecognitionListeningOptions = { language: 'pt-PT' };
   matches = [];
 
-  constructor(
-    private figService: FigureService,
-    private speechRecognition: SpeechRecognition,
-    private nativeAudio: NativeAudio,
-    private audioServ: AudioService
-  ) {
+  constructor(private figService: FiguresService, private speechRecognition: SpeechRecognition, private nativeAudio: NativeAudio) {
     /* this.speechRecognition
       .isRecognitionAvailable()
       .then((available: boolean) => console.log(available));
@@ -48,9 +46,7 @@ export class FamilyGalleryPage {
     }); */
   }
 
-  onPlay(id: string) {
-    this.nativeAudio.play(id);
-  }
+  onPlay = (id: string) => this.nativeAudio.play(id);
 
   /*
   onSpeech = () =>

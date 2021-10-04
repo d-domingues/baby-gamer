@@ -1,26 +1,22 @@
 [
   {
-    "id": "papa",
+    "fileName": "family/papa.png",
     "name": "Papá",
-    "src": "assets/img/papa.png",
-    "soundSrc": "assets/mp3/papa.mp3"
+    "sound": "assets/mp3/papa.mp3"
   },
   {
-    "id": "mama",
+    "fileName": "family/mama.png",
     "name": "Mamã",
-    "src": "assets/img/mama.png",
-    "soundSrc": "assets/mp3/mama.mp3"
+    "sound": "assets/mp3/mama.mp3"
   },
   {
-    "id": "tio",
+    "fileName": "family/tio.png",
     "name": "Tio",
-    "src": "assets/img/tio.png",
-    "soundSrc": "assets/mp3/tio.mp3"
+    "sound": "assets/mp3/tio.mp3"
   },
   {
-    "id": "vovo",
+    "fileName": "family/vovo.png",
     "name": "Vovó",
-    "src": "assets/img/vovo.png",
-    "soundSrc": "assets/mp3/vovo.mp3"
+    "sound": "assets/mp3/vovo.mp3"
   }
 ]
